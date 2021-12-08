@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hotels</title>
+</head>
+<body>
+<table border=1>
+	<thead>
+		<th>hotel id</th>
+		<th>hotel name</th>
+		<th> city</th>
+		<th>available rooms</th>
+		<th>price</th>
+		<th> </th>
+
+	</thead>
+	<tbody>
+		<tr>
+		{% for hotel in hotels %}
+		<td>{{hotel[0]}}</td>
+		<td>{{hotel[1]}}</td>
+		<td>{{hotel[2]}}</td>
+		<td>{{hotel[3]}}</td>
+		<td>{{hotel[4]}}</td>
+		
+		<!-- <td><a href="http://{{ url_app }}/book_hotel/{{hotel[0]}}"><button>BOOK NOW</button></a></td> -->
+         <td><a href="http://{{ url_app }}/api/{{tidd}}/book/hotel/{{hotel[0]}}"><button>BOOK NOW</button></a></td>
+	</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+</body>
+</html>
